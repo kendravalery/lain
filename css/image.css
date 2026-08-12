@@ -1,0 +1,76 @@
+#imageLabel {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  max-width: 400px;
+}
+.image1,
+.image2 {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: 0.5rem;
+  transition: opacity 0.9s ease;
+}
+
+.image1 {
+  position: relative;
+  z-index: 1;
+}
+
+.image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+}
+#toggle:checked + label .image1 {
+  opacity: 0;
+}
+
+#toggle:checked + label .image2 {
+  opacity: 1;
+  pointer-events: auto;
+  animation: glitch 0.5s steps(2, end);
+}
+
+/* glitch image */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    clip-path: inset(0 0 0 0);
+  }
+
+  10% {
+    transform: translate(-2px, 2px);
+    clip-path: inset(10% 0 60% 0);
+  }
+
+  20% {
+    transform: translate(2px, -2px);
+    clip-path: inset(40% 0 20% 0);
+  }
+
+  30% {
+    transform: translate(-2px, 2px);
+    clip-path: inset(20% 0 30% 0);
+  }
+  40% {
+    transform: translate(2px, -2px);
+    clip-path: inset(5% 0 55% 0);
+  }
+  50% {
+    transform: translate(0);
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    transform: translate(0);
+    clip-path: inset(0 0 0 0);
+  }
+}

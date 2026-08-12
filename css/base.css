@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: black;
+}
+.image-container {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
