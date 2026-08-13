@@ -310,5 +310,3 @@ document.addEventListener("mousemove", (e) => {
     easterEeg.classList.remove("show");
   }
 });
-
-
