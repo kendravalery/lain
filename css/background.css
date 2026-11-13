@@ -5,25 +5,21 @@
   z-index: -2;
 }
 
-
 .background {
   position: absolute;
   inset: 0;
 
+  display: block;
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
-  transform-origin: center center;
-
   filter: brightness(0.2);
-
   pointer-events: none;
+
   transition:
     opacity 4s ease-in-out,
     filter 4s ease-in-out;
 }
-
 
 .background.hidden {
   opacity: 0;
@@ -33,13 +29,12 @@
 }
 /* zoom saat image terakhir */
 .background.final {
-  transform: scale(1.8);
 }
 
 .background.ending {
   animation:
     flickering 0.12s steps(2) infinite,
-    fade-dark 4s ease forwards;
+    fade-dark 1s ease forwards;
 }
 @keyframes flickering {
   0% {
@@ -65,7 +60,6 @@
   }
   to {
     opacity: 0;
-    filter: brightness(0);
   }
 }
 

@@ -8,11 +8,10 @@ This project is primarily an experiment in:
 - CSS animations
 - HTML5 Audio
 - Timed interactions
-
-It intentionally uses no frontend framework to keep the implementation close to the native web APIs.
+- three.js 0.186.1 (loaded via jsDelivr CDN)
 
 ## Author
-Kendra 
+Kendra
 
 GitHub: @kendravalery
 

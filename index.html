@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>lain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/image.css">
     <link rel="stylesheet" href="css/background.css">
@@ -12,31 +14,35 @@
 
 <body>
     <div class="background-wrapper">
-        <img src="img/streetXX.avif" class="background hidden" id="background">
+        <canvas class="background hidden" id="background"></canvas>
     </div>
+
     <div class="image-container">
         <input type="checkbox" id="toggle" hidden />
-        
+
         <label for="toggle" id="imageLabel">
             <img class="image1" src="img/XXXXXX.jpeg" alt="image 1" />
             <img class="image2" src="img/XXXXXX.gif" alt="image 2" />
         </label>
+
         <div id="easterEeg" class="easter-eeg">
             <button id="eastertoggle">?</button>
             <div id="easterContent" class="easter-content">
                 LAIN
             </div>
         </div>
+
         <!-- lain text random -->
         <div id="lain" class="lain">
             LAIN
         </div>
     </div>
-    <audio id="audio" src="audio/Bôa-Duvet.mp3"></audio>
-    <audio id="CameraFlash" src="audio/CameraFlash.mp3"></audio>
-    <audio id="abstractAudio" src="audio/abstractAudio.wav"></audio>
-    
-    <script src="js/main.js"></script>
+
+    <audio id="audio" src="audio/Bôa-Duvet.mp3" preload="auto"></audio>
+    <audio id="CameraFlash" src="audio/CameraFlash.mp3" preload="auto"></audio>
+    <audio id="abstractAudio" src="audio/abstractAudio.wav" preload="auto"></audio>
+
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

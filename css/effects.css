@@ -131,3 +131,16 @@
 .easter-content.show {
   display: block;
 }
+.image-container.ending-audio #easterEeg {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.image-container.ending-audio #imageLabel,
+.image-container.ending-audio #lain {
+  pointer-events: none;
+}
+
+#imageLabel {
+  transition: opacity 0.2s ease;
+}
